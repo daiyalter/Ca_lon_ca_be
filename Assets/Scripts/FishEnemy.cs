@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FishEnemy : MonoBehaviour
 {
+    /*
     public FishSpawner fishSpawner;
     public GameObject gameArea;
 

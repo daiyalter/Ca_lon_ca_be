@@ -318,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232729773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.18853644, z: 0}
+  m_LocalPosition: {x: -5.79, y: 0.18853644, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -457,15 +457,30 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1733655813}
-  - component: {fileID: 1733655812}
+  - component: {fileID: 1733655814}
   m_Layer: 0
   m_Name: FishSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1733655812
+--- !u!4 &1733655813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733655811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.19, y: -0.01, z: 0}
+  m_LocalScale: {x: 1.0177, y: 1.0177, z: 1.0177}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733655814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,30 +492,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35257581973b28a4f90e96632a7700c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefab: {fileID: 4249801451754218147, guid: 3e6ad57b51352b54c88944efa27670fe, type: 3}
-  gameArea: {fileID: 2147390312}
-  fishCount: 0
-  fishLimit: 50
-  fishesPerFrame: 1
-  spawnCircleRadius: 50
-  deathCircleRadius: 60
-  fastestSpeed: 20
-  slowestSpeed: 1
---- !u!4 &1733655813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733655811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0177, y: 1.0177, z: 1.0177}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  fishPrefab:
+  - {fileID: 4249801451754218147, guid: 3e6ad57b51352b54c88944efa27670fe, type: 3}
+  - {fileID: 5542330996929014594, guid: 2677917c101018448946709f45a41716, type: 3}
+  - {fileID: 2073237157360250620, guid: e68d89f2062226d4b84b58b218ce6832, type: 3}
+  - {fileID: 4755952120942098658, guid: bf49c7a7426838849aec7f21a3722101, type: 3}
+  - {fileID: 5002747949168438418, guid: 13854ff078f7cb74299f0b544fc03f83, type: 3}
+  secondSpawn: 1
+  minTrans: -6
+  maxTrans: 6
+  speed: 2
 --- !u!1 &1963074601
 GameObject:
   m_ObjectHideFlags: 0

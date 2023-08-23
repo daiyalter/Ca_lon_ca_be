@@ -4,6 +4,30 @@ using UnityEngine;
 
 public class FishSpawner : MonoBehaviour
 {
+    [SerializeField] GameObject[] fishPrefab;
+    [SerializeField] float secondSpawn = 0.5f;
+    [SerializeField] float minTrans;
+    [SerializeField] float maxTrans;
+    public float speed;
+    void Start()
+    {
+        StartCoroutine(FishSpawn());
+    }
+
+    IEnumerator FishSpawn()
+    {
+        while(true)
+        {
+            var wanted = Random.Range(minTrans, maxTrans);
+            var position = new Vector3(transform.position.x, wanted);
+            GameObject gameObject = Instantiate(fishPrefab[Random.Range(0, fishPrefab.Length
+                )],position,Quaternion.identity);
+            yield return new WaitForSeconds(secondSpawn);
+            gameObject.transform.position += new Vector3(1,0,0) * speed * Time.deltaTime;
+            Destroy(gameObject, 5f);
+        }
+    }
+    /*
     public GameObject fishPrefab;
     public GameObject gameArea;
 
@@ -29,7 +53,8 @@ public class FishSpawner : MonoBehaviour
             for (int i=0; i < fishesPerFrame; i ++)
             {
                 Vector3 position = GetRandomPosition();
-                FishEnemy newFish = AddFish(position);
+                FishEnemy Fish = AddFish(position);
+                Fish.transform.Rotate(Vector3.forward * Random.Range(-45.0f, 45.0f));
             }
         }
     }
@@ -58,4 +83,5 @@ public class FishSpawner : MonoBehaviour
 
         return fishScript;
     }
+    */
 }
