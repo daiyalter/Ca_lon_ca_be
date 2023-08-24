@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - FishEnemy
+  - FishEnemyLv2
+  - FishEnemyLv3
   layers:
   - Default
   - TransparentFX

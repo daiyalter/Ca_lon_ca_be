@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5389524272188704430}
   - component: {fileID: 2787308367206550263}
   - component: {fileID: -2899056168337672510}
-  - component: {fileID: 6924511257974734736}
   m_Layer: 0
   m_Name: FishEnemy3
-  m_TagString: FishEnemy
+  m_TagString: FishEnemyLv3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,16 +163,3 @@ PolygonCollider2D:
       - {x: 0.255, y: -0.405}
       - {x: 0.345, y: -0.315}
       - {x: 0.49499997, y: -0.435}
---- !u!114 &6924511257974734736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073237157360250620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c15f82e7641823647b1794a3d5e433c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentScore: 0

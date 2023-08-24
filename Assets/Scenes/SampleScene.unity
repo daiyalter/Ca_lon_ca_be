@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &372595402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 372595403}
+  m_Layer: 0
+  m_Name: SpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &372595403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372595402}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18, y: 0, z: 0}
+  m_LocalScale: {x: 0.9826079, y: 0.9826079, z: 0.9826079}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1733655813}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +334,8 @@ GameObject:
   - component: {fileID: 1232729775}
   - component: {fileID: 1232729776}
   - component: {fileID: 1232729777}
+  - component: {fileID: 1232729778}
+  - component: {fileID: 1232729779}
   m_Layer: 0
   m_Name: FishPlayer
   m_TagString: Untagged
@@ -448,6 +481,34 @@ PolygonCollider2D:
     - - {x: 0.62957335, y: -0.13663639}
       - {x: 0.6341591, y: 0.013815001}
       - {x: 0.7570795, y: -0.029540285}
+--- !u!114 &1232729778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232729773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15f82e7641823647b1794a3d5e433c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+--- !u!114 &1232729779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232729773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292f1decac6f6f7488dff6753816d72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishLevel: 0
+  player: {fileID: 1232729774}
+  score: {fileID: 1232729778}
 --- !u!1 &1733655811
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +537,8 @@ Transform:
   m_LocalPosition: {x: 7.19, y: -0.01, z: 0}
   m_LocalScale: {x: 1.0177, y: 1.0177, z: 1.0177}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 372595403}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -496,8 +558,6 @@ MonoBehaviour:
   - {fileID: 4249801451754218147, guid: 3e6ad57b51352b54c88944efa27670fe, type: 3}
   - {fileID: 5542330996929014594, guid: 2677917c101018448946709f45a41716, type: 3}
   - {fileID: 2073237157360250620, guid: e68d89f2062226d4b84b58b218ce6832, type: 3}
-  - {fileID: 4755952120942098658, guid: bf49c7a7426838849aec7f21a3722101, type: 3}
-  - {fileID: 5002747949168438418, guid: 13854ff078f7cb74299f0b544fc03f83, type: 3}
   secondSpawn: 1
   minTrans: -6
   maxTrans: 6
