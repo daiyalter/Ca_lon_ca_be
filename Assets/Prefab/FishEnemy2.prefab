@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2242310321768344769}
   - component: {fileID: -585084089760532209}
   - component: {fileID: 1326806883850167489}
+  - component: {fileID: 5205198788135863211}
   m_Layer: 0
   m_Name: FishEnemy2
   m_TagString: FishEnemyLv2
@@ -117,7 +118,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -168,3 +169,16 @@ PolygonCollider2D:
       - {x: 0.505, y: -0.225}
       - {x: 0.66499996, y: -0.295}
       - {x: 0.79499996, y: -0.275}
+--- !u!114 &5205198788135863211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542330996929014594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e765805a61b6243bd5a2c2f3c775c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4

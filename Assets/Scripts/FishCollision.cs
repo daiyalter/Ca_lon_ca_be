@@ -5,25 +5,25 @@ using UnityEngine;
 public class FishCollision : MonoBehaviour
 {
     public int currentScore = 0;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         CheckDie(collision);
         CheckScore(collision);
     }
-    protected void CheckDie(Collision2D collision)
+    protected void CheckDie(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("FishEnemyLv2") && currentScore < 5)
         {           
             Debug.Log("Die");
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag.Equals("FishEnemyLv3") && currentScore < 10)
+        if (collision.gameObject.tag.Equals("FishEnemyLv3") && currentScore < 15)
         {
             Debug.Log("Die");
             Destroy(gameObject);
         }
     }   
-    protected void CheckScore(Collision2D collision)
+    protected void CheckScore(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("FishEnemy"))
         {

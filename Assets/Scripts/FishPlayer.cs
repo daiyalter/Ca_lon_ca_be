@@ -9,7 +9,7 @@ public class FishPlayer : MonoBehaviour
     public FishCollision score;
     void Update()
     {
-        if (score.currentScore >= 10)
+        if (score.currentScore >= 15)
         {
             Debug.Log("Fish Player Lv 3");
             if (player.transform.localScale.x != 3) player.transform.localScale += new Vector3(1,1,0);           

@@ -8,13 +8,10 @@ public class FishSpawner : MonoBehaviour
     [SerializeField] float secondSpawn = 0.5f;
     [SerializeField] float minTrans;
     [SerializeField] float maxTrans;
-    public float speed;
-    private float currentTimeSpawn = 0;
     void Start()
     {
         StartCoroutine(FishSpawn());
     }
-
     IEnumerator FishSpawn()
     {
         while (true)
@@ -23,14 +20,9 @@ public class FishSpawner : MonoBehaviour
             var position = new Vector3(transform.position.x, wanted);
             GameObject gameObject = Instantiate(fishPrefab[Random.Range(0, fishPrefab.Length
                 )], position, Quaternion.identity);
-            AImovement(gameObject);
             yield return new WaitForSeconds(secondSpawn);
             Destroy(gameObject, 5f);
         }
-    }
-    protected void AImovement(GameObject fish)
-    {
-        fish.transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
     }
     /*
     public GameObject fishPrefab;
