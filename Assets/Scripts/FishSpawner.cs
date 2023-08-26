@@ -21,7 +21,7 @@ public class FishSpawner : MonoBehaviour
             GameObject gameObject = Instantiate(fishPrefab[Random.Range(0, fishPrefab.Length
                 )], position, Quaternion.identity);
             yield return new WaitForSeconds(secondSpawn);
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 10f);
         }
     }
     /*
